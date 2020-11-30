@@ -8,8 +8,14 @@
 #include "population.hpp"
 
 class Simulation {
+private:
     Population population;
-
+    double baseDistance;
+    double bestDistance;
+    double improvement_factor = 0.4;
+public:
+    const int ITERATIONS = 1000;
+    void simulate();
 };
 
 

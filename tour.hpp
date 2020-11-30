@@ -11,11 +11,21 @@
 class Tour {
 private:
     std::vector<City> cities;
-    int fitness;
+    double fitness;
 public:
     Tour(const std::vector<City> &cities);
+    Tour(const Tour &t2);
 
     void calculateFitness();
+
+    const std::vector<City> &getCities() const;
+
+    std::vector<City> &getModifiableCities();
+
+    double getFitness() const;
+
+    void setCities(const std::vector<City> &cities);
+    friend bool operator == (const Tour &a,const Tour &b);
 };
 
 

@@ -1,6 +1,8 @@
 #include <iostream>
+#include "simulation.hpp"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    Simulation s;
+    s.simulate();
     return 0;
 }
